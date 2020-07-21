@@ -19,7 +19,9 @@
         switch($text)
         {
             case 'hi':
-                $speech = "Hi, PORFIN SE CONECTO LA BD y le añadi el valor 1";
+                if (mysqli_query($conn, $sql)) {
+                      $speech = "Hi, PORFIN SE CONECTO LA BD y le añadi el valor 1";
+                 }
                 $sql = "INSERT INTO acumulador (acum) VALUES ('1')";
                 mysqli_close($conn);
             break;
