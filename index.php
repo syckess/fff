@@ -1,11 +1,5 @@
 <?php
 
-    $servername = "bfpefjoyqfutj3kawr98-mysql.services.clever-cloud.com:3306";
-    $database = "bfpefjoyqfutj3kawr98";
-    $username = "u9oqkqjvsiok9pxt";
-    $password = "nJ5nsu5Xt5uhDqx21wHE";
-    $conn = mysqli_connect($servername, $username, $password, $database);
-
     $method = $_SERVER['REQUEST_METHOD'];
 
     if($method == 'POST')
@@ -17,17 +11,7 @@
         switch($text)
         {
             case 'hi':
-                    if (!$conn) {
-                         die("Connection failed: " . mysqli_connect_error());
-                    }
-                    else
-                    {
-                        $speech = "Hi, PORFIN SE CONECTO LA BD";
-                        
-                    }
-                  
-                   
-                
+                $speech = "Hi, PORFIN SE CONECTO LA BD";
             break;
             
             case 'bye':
@@ -50,7 +34,6 @@
         echo json_encode($response);
 
     }
-    mysqli_close($conn);
     else
     {
         echo "Method not allowed";
