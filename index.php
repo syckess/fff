@@ -14,7 +14,6 @@
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-
     if($method == 'POST')
     {
         $requestBody = file_get_contents('php://input');
