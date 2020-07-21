@@ -4,12 +4,12 @@
 
     if($method == 'POST')
     {
+        echo "Se logro el method";
         $requestBody = file_get_contents('php://input');
         $json = json_decode($requestBody);
         $text = $json->queryResult->parameters->text;
 
-        switch($text)
-        {
+        switch($text){
             case 'hi':
                 $speech = "Hi, PORFIN SE CONECTO LA BD";
             break;
@@ -34,8 +34,7 @@
         echo json_encode($response);
 
     }
-    else
-    {
+    else{
         echo "Method not allowed";
     }
 ?>
