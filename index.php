@@ -12,19 +12,19 @@
         switch($text)
         {
             case 'hi':
-                $speech = "Hi, Nice to meet you";
+                $speech = "Hi, aun no encontramos lo de la BD";
             break;
             
             case 'bye':
-                $speech = "Bye, good night";
+                $speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
             break;
             
             case 'anything':
-                $speech = "Yes, you can type anything here.";
+                $speech = "Podras decir anything cuando la BD este lista";
             break;
 
             default:
-                $speech = "Sorry, I dodnt get that, please ask something else";
+                $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
         
