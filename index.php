@@ -4,7 +4,6 @@
 
     if($method == 'POST')
     {
-        echo "Se logro el method";
         $requestBody = file_get_contents('php://input');
         $json = json_decode($requestBody);
         $text = $json->queryResult->parameters->text;
