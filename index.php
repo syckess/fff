@@ -4,9 +4,9 @@
     $database = "bfpefjoyqfutj3kawr98";
     $username = "u9oqkqjvsiok9pxt";
     $password = "nJ5nsu5Xt5uhDqx21wHE";
-    $method = $_SERVER['REQUEST_METHOD'];
     $conn = mysqli_connect($servername, $username, $password, $database);
-    // Process only when method is POST
+
+    $method = $_SERVER['REQUEST_METHOD'];
 
     if($method == 'POST')
     {
@@ -20,9 +20,14 @@
                     if (!$conn) {
                          die("Connection failed: " . mysqli_connect_error());
                     }
-                    echo "Connected successfully";
-                    $speech = "Hi, PORFIN SE CONECTO LA BD";
-                    mysqli_close($conn);
+                    else
+                    {
+                        echo "Connected successfully";
+                        $speech = "Hi, PORFIN SE CONECTO LA BD";
+                        mysqli_close($conn);
+                    }
+                  
+                   
                 
             break;
             
