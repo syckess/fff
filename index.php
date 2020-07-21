@@ -26,7 +26,7 @@
                 $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
-        
+       
         $response = new \stdclass();
         $response->fulfillmentText = $speech;
         $response->displayText = $speech;
