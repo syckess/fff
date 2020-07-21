@@ -1,6 +1,11 @@
 <?php
 
+    $servername = "bfpefjoyqfutj3kawr98-mysql.services.clever-cloud.com:3306";
+    $database = "bfpefjoyqfutj3kawr98";
+    $username = "u9oqkqjvsiok9pxt";
+    $password = "nJ5nsu5Xt5uhDqx21wHE";
     $method = $_SERVER['REQUEST_METHOD'];
+    $conn = mysqli_connect($servername, $username, $password, $database);
     // Process only when method is POST
 
     if($method == 'POST')
@@ -12,7 +17,13 @@
         switch($text)
         {
             case 'hi':
-                $speech = "Hi, aun no encontramos lo de la BD";
+                    if (!$conn) {
+                         die("Connection failed: " . mysqli_connect_error());
+                    }
+                    echo "Connected successfully";
+                    $speech = "Hi, PORFIN SE CONECTO LA BD";
+                    mysqli_close($conn);
+                
             break;
             
             case 'bye':
