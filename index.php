@@ -1,13 +1,5 @@
 <?php
 
-
-
-    $servername = "bfpefjoyqfutj3kawr98-mysql.services.clever-cloud.com:3306";
-    $database = "bfpefjoyqfutj3kawr98";
-    $username = "u9oqkqjvsiok9pxt";
-    $password = "nJ5nsu5Xt5uhDqx21wHE";
-    $conn = mysqli_connect($servername, $username, $password, $database);
-
     $method = $_SERVER['REQUEST_METHOD'];
 
     if($method == 'POST')
@@ -19,11 +11,7 @@
         switch($text)
         {
             case 'hi':
-                if (mysqli_query($conn, $sql)) {
-                      $speech = "Hi, PORFIN SE CONECTO LA BD y le añadi el valor 1";
-                 }
-                $sql = "INSERT INTO acumulador (acum) VALUES ('1')";
-                mysqli_close($conn);
+                $speech = "Hi, PORFIN SE CONECTO LA BD";
             break;
             
             case 'bye':
