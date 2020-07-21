@@ -22,9 +22,8 @@
                     }
                     else
                     {
-                        echo "Connected successfully";
                         $speech = "Hi, PORFIN SE CONECTO LA BD";
-                        mysqli_close($conn);
+                        
                     }
                   
                    
@@ -51,7 +50,7 @@
         echo json_encode($response);
 
     }
-
+    mysqli_close($conn);
     else
     {
         echo "Method not allowed";
