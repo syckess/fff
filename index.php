@@ -7,7 +7,7 @@
     $password = "nJ5nsu5Xt5uhDqx21wHE";
     $conn = mysqli_connect($servername, $username, $password, $database);
 
-    if (mysqli_query($conn, $sql)) {
+    if (mysqli_query($conn)) {
       echo "New record created successfully";
     } 
     else {
