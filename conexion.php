@@ -1,5 +1,5 @@
   
-!--<?php
+<?php
 
 $servername = "bfpefjoyqfutj3kawr98-mysql.services.clever-cloud.com:3306";
 $database = "bfpefjoyqfutj3kawr98";
