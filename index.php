@@ -1,6 +1,9 @@
 <?php
 // sí funciona
 if ((include 'conexion.php') == TRUE) {
-    echo 'OK';
+    echo "OK";
 }
+else {
+    echo "no funciona";
+   }
 ?>
