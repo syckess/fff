@@ -1,5 +1,5 @@
 <?php
-
+include 'conexion.php';
     $method = $_SERVER['REQUEST_METHOD'];
 
     if($method == 'POST')
@@ -11,6 +11,7 @@
         switch($text)
         {
             case 'hi':
+                $sql = "INSERT INTO acumulador (acum) VALUES ('1')";
                 $speech = "Hi, PORFIN SE CONECTO LA BD";
             break;
             
