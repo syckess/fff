@@ -43,8 +43,8 @@
         }
         if($aux == 1)
         {
-            $speech = "jajajaj"
-        }  
+            
+        } 
         $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
         mysqli_query($conn, $sql, $total);
         mysqli_close($conn);
