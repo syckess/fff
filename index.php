@@ -44,21 +44,25 @@
         if($aux == 1)
         {
             $speech2 = "jajaja";
-        } 
-        $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        mysqli_query($conn, $sql, $total);
-        mysqli_close($conn);
-        
+            $response2 = new \stdclass();
+            $response2->fulfillmentText = $speech2;
+            $response2->displayText = $speech2;
+            $response2->source = "webhook";
+            echo json_encode($response2);
+         }
+        else
+        {
         $response = new \stdclass();
         $response->fulfillmentText = $speech;
         $response->displayText = $speech;
         $response->source = "webhook";
-        $response2 = new \stdclass();
-        $response2->fulfillmentText = $speech2;
-        $response2->displayText = $speech2;
-        $response2->source = "webhook";
-        echo json_encode($response, $response2);
 
+        echo json_encode($response);
+        }
+        $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
+        mysqli_query($conn, $sql, $total);
+        mysqli_close($conn);
+        
     }
     else
     {
