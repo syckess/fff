@@ -59,7 +59,7 @@
             echo json_encode($response);
         }
         $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        mysqli_query($conn, $sql, $speech2);
+        mysqli_query($conn, $sql, $sql2);
         mysqli_close($conn);   
 
         
