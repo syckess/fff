@@ -40,15 +40,22 @@
                 $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
-        $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        mysqli_query($conn, $sql);
-        mysqli_close($conn);
-        
-        $response = new \stdclass();
-        $response->fulfillmentText = $speech;
-        $response->displayText = $speech;
-        $response->source = "webhook";
-        echo json_encode($response);
+        if($aux == 1)
+        {
+            
+        }
+        else
+        {
+            $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
+            mysqli_query($conn, $sql);
+            mysqli_close($conn);
+            $response = new \stdclass();
+            $response->fulfillmentText = $speech;
+            $response->displayText = $speech;
+            $response->source = "webhook";
+            echo json_encode($response);    
+        }   
+
 
     }
     else
