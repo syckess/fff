@@ -36,7 +36,8 @@
             case 'resultadito':
                 $aux = 1;
             break;    
-            case 'resultadito':
+                
+            case 'Acepto':
       
             break;  
 
