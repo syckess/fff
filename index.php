@@ -31,7 +31,10 @@
                 $speech = "Podras decir anything cuando la BD este lista";
                 $punto = 20;
             break;
-                
+            
+            case 'si':
+                $speech = "holi";
+            break;    
                 
             default:
                 $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
