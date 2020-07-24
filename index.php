@@ -19,17 +19,17 @@
         switch($text)
         {
             case 'No':
-                $speech = "Hi, PORFIN SE CONECTO LA BD";
+                //$speech = "Hi, PORFIN SE CONECTO LA BD";
                 $punto = 5;
             break;
            
             case 'Poca':
-                $speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
+                //$speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
                 $punto = 10;
             break;
             
             case 'Si':
-                $speech = "Podras decir anything cuando la BD este lista";
+                //$speech = "Podras decir anything cuando la BD este lista";
                 $punto = 20;
             break;
                 
@@ -42,7 +42,7 @@
             break;  
 
             default:
-                $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
+                //$speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
         if($aux == 1)
