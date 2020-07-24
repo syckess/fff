@@ -6,7 +6,7 @@
     {
         $requestBody = file_get_contents('php://input');
         $json = json_decode($requestBody);
-        $text = $json->queryResult->parameters->text;
+        $TipoRespuestas = $json->queryResult->parameters->text;
         $id = 'Matias';
         
         
@@ -16,7 +16,7 @@
         $password = "nJ5nsu5Xt5uhDqx21wHE";
         $conn = mysqli_connect($servername, $username, $password, $database);
 
-        switch($text)
+        switch($TipoRespuestas)
         {
             case 'No':
                 $speech = "Hi, PORFIN SE CONECTO LA BD";
