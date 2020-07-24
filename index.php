@@ -31,15 +31,17 @@
                 $speech = "Podras decir anything cuando la BD este lista";
                 $punto = 20;
             break;
+                
+            case 'si':
+                $aux = 1;
+            break;               
 
             default:
                 $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
         $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        $result = "SELECT SUM(acum) AS value_sum FROM acumulador";
-        $sum = value_sum;
-        mysqli_query($conn, $sql, $result, $row);
+        mysqli_query($conn, $sql);
         mysqli_close($conn);
         
         $response = new \stdclass();
