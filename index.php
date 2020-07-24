@@ -46,7 +46,7 @@
             $total = mysql_fetch_assoc($sql);
             mysqli_query($conn, $sql);
             mysqli_close($conn);
-            $speech = $total;
+            $speech = "aqui deberia entregarte la suma total de la BD";
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
             $response->displayText = $speech;
