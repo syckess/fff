@@ -31,45 +31,21 @@
                 $speech = "Podras decir anything cuando la BD este lista";
                 $punto = 20;
             break;
-            
-            case 'si':
-                $aux = 1;
-            break;    
-                
+
             default:
                 $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
-        
-        //$result = "SELECT SUM(acum) AS total FROM acumulador";
-        //$row = mysql_fetch_assoc($result);
-        //$total = $row['total'];
-   
-        if($aux == 1)
-        {
-
-            $speech2 = "jajaj";
-            $response2 = new \stdclass();
-            $response2->fulfillmentText = $speech2;
-            $response2->displayText = $speech2;
-            $response2->source = "webhook";
-            echo json_encode($response2);
-            
-         }
-        else
-        {
-            
-            $response = new \stdclass();
-            $response->fulfillmentText = $speech;
-            $response->displayText = $speech;
-            $response->source = "webhook";
-            echo json_encode($response);
-        }
         $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        mysqli_query($conn, $sql, $result, $row);
+        mysqli_query($conn, $sql);
         mysqli_close($conn);
-
         
+        $response = new \stdclass();
+        $response->fulfillmentText = $speech;
+        $response->displayText = $speech;
+        $response->source = "webhook";
+        echo json_encode($response);
+
     }
     else
     {
