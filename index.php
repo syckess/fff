@@ -44,13 +44,13 @@
         {
             $sql = "SELECT SUM(acum) as suma FROM acumulador";
             $resultado = mysqli_query($conn, $sql);
-            mysqli_close($conn);
             $speech = $resultado;
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
             $response->displayText = $speech;
             $response->source = "webhook";
             echo json_encode($response);    
+            mysqli_close($conn);
         }
         else
         {
