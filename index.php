@@ -31,7 +31,12 @@
                 $speech = "Podras decir anything cuando la BD este lista";
                 $punto = 20;
             break;
-
+                
+            case 'si':
+                $total = "SELECT acum FROM acumulador";
+                $speech = "Podras decir anything cuando la BD este lista" $total;
+            break
+                
             default:
                 $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
