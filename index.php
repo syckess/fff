@@ -1,12 +1,13 @@
 <?php
 
     $method = $_SERVER['REQUEST_METHOD'];
-
+    
     if($method == 'POST')
     {
         $requestBody = file_get_contents('php://input');
         $json = json_decode($requestBody);
         $text = $json->queryResult->parameters->text;
+        $id = 'Matias';
         
         
         $servername = "bfpefjoyqfutj3kawr98-mysql.services.clever-cloud.com:3306";
@@ -42,7 +43,7 @@
         }
         if($aux == 1)
         {
-            $sql = "SELECT SUM(acum) as suma FROM acumulador";
+            $sql = "SELECT SUM(acum) as suma FROM acumulador WHERE id = '$id'";
             $resultado = mysqli_query($conn, $sql);
             $fetch = mysqli_fetch_array($resultado); 
             $speech = $fetch[0];
@@ -55,7 +56,8 @@
         }
         else
         {
-            $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
+            
+            $sql = "INSERT INTO acumulador (acum, id) VALUES ('$punto', '$id')";
             mysqli_query($conn, $sql);
             mysqli_close($conn);
             $response = new \stdclass();
