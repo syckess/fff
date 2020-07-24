@@ -40,12 +40,15 @@
                 $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
-        
+        $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
+        $result = mysql_query('SELECT SUM(acum) AS total FROM acumulador')
+        $row = mysql_fetch_assoc($result);
+        $total = $row['total'];
+        mysqli_query($conn, $sql, $sql2);
+        mysqli_close($conn);   
         if($aux == 1)
         {
-            $result = mysql_query('SELECT SUM(acum) AS total FROM acumulador')
-            $row = mysql_fetch_assoc($result);
-            $total = $row['total'];
+
             $speech2 = $total;
             $response2 = new \stdclass();
             $response2->fulfillmentText = $speech2;
@@ -63,9 +66,7 @@
             $response->source = "webhook";
             echo json_encode($response);
         }
-        $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        mysqli_query($conn, $sql, $sql2);
-        mysqli_close($conn);   
+
 
         
     }
