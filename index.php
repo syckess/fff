@@ -32,12 +32,23 @@
                 $punto = 20;
             break;
                 
+            case 'si'
+                $speech = "te voy a entregar tu valor";
+                $total = 1;
+            break; 
+                
             default:
                 $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
         $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        mysqli_query($conn, $sql);
+        if($total == 1)
+        {
+            $total = "select sum(acum) from acumulador";
+            $speech $total;
+            
+        } 
+        mysqli_query($conn, $sql, $total);
         mysqli_close($conn);
         
         $response = new \stdclass();
