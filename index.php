@@ -42,10 +42,11 @@
         }
         if($aux == 1)
         {
-            $sql = "SELECT SUM(acum) FROM acumulador";
-            mysqli_query($conn, $sql);
+            $sql = "SELECT SUM(acum) as suma FROM acumulador";
+            $resultado = mysqli_query($conn, $sql);
+            $fetch = $resultado->fetch_assoc();
             mysqli_close($conn);
-            $speech = "aqui deberia entregarte la suma total de la BD";
+            $speech = $fetch['suma'];
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
             $response->displayText = $speech;
