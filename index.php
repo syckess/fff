@@ -41,15 +41,15 @@
             break;
         }
         $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        $result = "SELECT SUM(acum) AS total FROM acumulador";
-        $row = mysql_fetch_assoc($result);
-        $total = $row['total'];
+        //$result = "SELECT SUM(acum) AS total FROM acumulador";
+        //$row = mysql_fetch_assoc($result);
+        //$total = $row['total'];
         mysqli_query($conn, $sql, $result, $row);
         mysqli_close($conn);   
         if($aux == 1)
         {
 
-            $speech2 = $total;
+            $speech2 = "jajaj";
             $response2 = new \stdclass();
             $response2->fulfillmentText = $speech2;
             $response2->displayText = $speech2;
