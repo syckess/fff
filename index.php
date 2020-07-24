@@ -43,7 +43,7 @@
         if($aux == 1)
         {
             $sql = "SELECT SUM(acum) FROM acumulador";
-            $total = mysql_fetch_row($sql);
+            $total = mysql_fetch_assoc($sql);
             mysqli_query($conn, $sql);
             mysqli_close($conn);
             $speech = $total;
