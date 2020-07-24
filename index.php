@@ -44,7 +44,7 @@
         {
             $sql = "SELECT SUM(acum) as suma FROM acumulador";
             $resultado = mysqli_query($conn, $sql);
-            $fetch = mysqli_fetch_assoc($resultado); 
+            $fetch = mysql_fetch_assoc($resultado); 
             $speech = $fetch['suma'];
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
