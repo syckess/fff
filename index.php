@@ -48,17 +48,18 @@
             $response2->displayText = $speech2;
             $response2->source = "webhook";
             echo json_encode($response2);
+            $sql2 = "select sum(acum) from acumulador";
          }
         else
         {
-        $response = new \stdclass();
-        $response->fulfillmentText = $speech;
-        $response->displayText = $speech;
-        $response->source = "webhook";
-        echo json_encode($response);
+            $response = new \stdclass();
+            $response->fulfillmentText = $speech;
+            $response->displayText = $speech;
+            $response->source = "webhook";
+            echo json_encode($response);
         }
         $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        mysqli_query($conn, $sql);
+        mysqli_query($conn, $sql, $sql2);
         mysqli_close($conn);   
 
         
