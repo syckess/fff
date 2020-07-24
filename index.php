@@ -58,16 +58,16 @@
          }
         else
         {
-            $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-            mysqli_query($conn, $sql, $result, $row);
-            mysqli_close($conn);
+            
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
             $response->displayText = $speech;
             $response->source = "webhook";
             echo json_encode($response);
         }
-
+        $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
+        mysqli_query($conn, $sql, $result, $row);
+        mysqli_close($conn);
 
         
     }
