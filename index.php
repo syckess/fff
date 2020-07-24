@@ -40,6 +40,7 @@
                 $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
+        $sql = "select sum(acum) from acumulador";
         if($aux == 1)
         {
             $speech2 = "select sum(SALARIO) from EMPLEADOS";
@@ -52,13 +53,14 @@
          }
         else
         {
+            $speech = "$sql";
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
             $response->displayText = $speech;
             $response->source = "webhook";
             echo json_encode($response);
         }
-        $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
+        
         mysqli_query($conn, $sql, $sql2);
         mysqli_close($conn);   
 
