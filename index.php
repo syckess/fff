@@ -18,22 +18,22 @@
 
         switch($text)
         {
-            case 'hi':
+            case 'No':
                 $speech = "Hi, PORFIN SE CONECTO LA BD";
                 $punto = 5;
             break;
            
-            case 'bye':
+            case 'Poca':
                 $speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
                 $punto = 10;
             break;
             
-            case 'anything':
+            case 'Si':
                 $speech = "Podras decir anything cuando la BD este lista";
                 $punto = 20;
             break;
                 
-            case 'si':
+            case 'resultado':
                 $aux = 1;
             break;               
 
