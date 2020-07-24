@@ -37,7 +37,10 @@
             break;
         }
         $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        mysqli_query($conn, $sql);
+        $result = "SELECT SUM(acum) AS value_sum FROM acumulador"; 
+        $row = mysql_fetch_assoc($result); 
+        $sum = $row['value_sum'];
+        mysqli_query($conn, $sql, $result, $row);
         mysqli_close($conn);
         
         $response = new \stdclass();
