@@ -59,7 +59,6 @@
          }
         else
         {
-            $speech = $sql;
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
             $response->displayText = $speech;
