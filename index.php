@@ -35,7 +35,10 @@
                 
             case 'resultadito':
                 $aux = 1;
-            break;               
+            break;    
+            case 'resultadito':
+      
+            break;  
 
             default:
                 $speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
