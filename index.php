@@ -34,7 +34,6 @@
                 
             case 'si'
                 $speech = "te voy a entregar tu valor";
-                $total = 1;
             break; 
                 
             default:
@@ -42,12 +41,6 @@
             break;
         }
         $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        if($total == 1)
-        {
-            $total = "select sum(acum) from acumulador";
-            $speech $total;
-            
-        } 
         mysqli_query($conn, $sql, $total);
         mysqli_close($conn);
         
