@@ -41,7 +41,7 @@
             break;
         }
         $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
-        $result = mysql_query('SELECT SUM(acum) AS total FROM acumulador')
+        $result = "SELECT SUM(acum) AS total FROM acumulador";
         $row = mysql_fetch_assoc($result);
         $total = $row['total'];
         mysqli_query($conn, $sql, $result, $row);
