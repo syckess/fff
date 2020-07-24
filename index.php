@@ -42,7 +42,15 @@
         }
         if($aux == 1)
         {
-            
+            $sql = "SELECT SUM(acum) FROM acumulador";
+            mysqli_query($conn, $sql);
+            mysqli_close($conn);
+            $speech = $sql;
+            $response = new \stdclass();
+            $response->fulfillmentText = $speech;
+            $response->displayText = $speech;
+            $response->source = "webhook";
+            echo json_encode($response);    
         }
         else
         {
