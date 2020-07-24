@@ -33,7 +33,7 @@
                 $punto = 20;
             break;
                 
-            case 'resultado':
+            case 'resultadito':
                 $aux = 1;
             break;               
 
