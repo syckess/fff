@@ -32,7 +32,7 @@
                 $punto = 20;
             break;
                 
-            case 'si'
+            case 'si':
                 $speech = "te voy a entregar tu valor";
             break; 
                 
