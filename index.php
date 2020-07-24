@@ -34,6 +34,7 @@
             
             case 'si':
                 $speech = "holi";
+                $aux = 1;
             break;    
                 
             default:
@@ -41,6 +42,10 @@
             break;
         }
         $sql = "INSERT INTO acumulador (acum) VALUES ('$punto')";
+        if($aux == 1)
+        {
+            $speech = "jajajaj"
+        }   
         mysqli_query($conn, $sql, $total);
         mysqli_close($conn);
         
