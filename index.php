@@ -21,7 +21,7 @@
                 $speech = "Hi, PORFIN SE CONECTO LA BD";
                 $punto = 5;
             break;
-            
+           
             case 'bye':
                 $speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
                 $punto = 10;
@@ -44,8 +44,8 @@
         {
             $sql = "SELECT SUM(acum) as suma FROM acumulador";
             $resultado = mysqli_query($conn, $sql);
-            $fetch = mysql_fetch_assoc($resultado); 
-            $speech = $fetch['suma'];
+            $fetch = mysqli_fetch_array($resultado); 
+            $speech = $fetch[0];
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
             $response->displayText = $speech;
