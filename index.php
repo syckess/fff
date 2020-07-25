@@ -45,11 +45,11 @@
                 //$speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
+         $sql = "SELECT acum FROM acumulador WHERE id = '$id'";
+         $resultado = mysqli_query($conn, $sql);
+         $fetch = mysqli_fetch_array($resultado); 
         if($aux == 1)
         {
-            $sql = "SELECT SUM(acum) as suma FROM acumulador WHERE id = '$id'";
-            $resultado = mysqli_query($conn, $sql);
-            $fetch = mysqli_fetch_array($resultado); 
             $speech = $fetch[0];
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
@@ -60,15 +60,24 @@
         }
         else
         {
-            
-            $sql = "INSERT INTO acumulador (acum, id) VALUES ('$punto', '$id')";
+            $rows = mysqli_num_rows($resultado); 
+            if($rows == 0)
+            {
+                 $sql = "INSERT INTO acumulador (acum, id) VALUES ('$punto', '$id')";
+            }
+            else
+            {
+                $suma = $fetch[0] + $punto;
+                $sql = "UPDATE acumulador SET acum = '$suma' WHERE id='$id'"; 
+            }
             mysqli_query($conn, $sql);
             mysqli_close($conn);
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
             $response->displayText = $speech;
             $response->source = "webhook";
-            echo json_encode($response);    
+            echo json_encode($response);
+           
         }   
 
 
