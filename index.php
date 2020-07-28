@@ -6,8 +6,9 @@
     {
         $requestBody = file_get_contents('php://input');
         $json = json_decode($requestBody);
+        $id = $json->queryResult->parameters->id;
         $text = $json->queryResult->parameters->text;
-        $id = 'Andres';
+        
         
         
         $servername = "bfpefjoyqfutj3kawr98-mysql.services.clever-cloud.com:3306";
