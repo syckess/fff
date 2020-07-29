@@ -10,13 +10,16 @@
         $text = $json->queryResult->parameters->text;
         
         
-        
         $servername = "bfpefjoyqfutj3kawr98-mysql.services.clever-cloud.com:3306";
         $database = "bfpefjoyqfutj3kawr98";
         $username = "u9oqkqjvsiok9pxt";
         $password = "nJ5nsu5Xt5uhDqx21wHE";
         $conn = mysqli_connect($servername, $username, $password, $database);
 
+        if($id)
+        {
+            $sql = "INSERT INTO acumulador (acum, id) VALUES ('$punto', '$id')";
+        }
         switch($text)
         {
             case 'No':
