@@ -6,7 +6,7 @@
     {
         $requestBody = file_get_contents('php://input');
         $json = json_decode($requestBody);
-        $id = $json->queryResult->parameters->id;
+        $id = "Alexander";
         $text = $json->queryResult->parameters->text;
         
         
@@ -16,10 +16,6 @@
         $password = "nJ5nsu5Xt5uhDqx21wHE";
         $conn = mysqli_connect($servername, $username, $password, $database);
 
-        if($id)
-        {
-            $sql = "INSERT INTO acumulador (acum, id) VALUES ('$punto', '$id')";
-        }
         switch($text)
         {
             case 'No':
