@@ -34,7 +34,7 @@
                 $punto = 20;
             break;
                 
-            case 'resultadito':
+            case 'claro que si':
                 $aux = 1;
             break;    
                 
