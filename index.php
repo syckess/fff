@@ -46,7 +46,7 @@
                 //$speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
-         $sql = "SELECT acum FROM acumulador WHERE id = '$id'";
+         $sql = "SELECT acum FROM acumulador WHERE id = '$id' and edad = '$edad'";
          $resultado = mysqli_query($conn, $sql);
          $fetch = mysqli_fetch_array($resultado); 
         if($aux == 1)
@@ -64,12 +64,12 @@
             $rows = mysqli_num_rows($resultado); 
             if($rows == 0)
             {
-                 $sql = "INSERT INTO acumulador (acum, id) VALUES ('$punto', '$id')";
+                 $sql = "INSERT INTO acumulador (acum, id, edad) VALUES ('$punto', '$id', '$edad')";
             }
             else
             {
                 $suma = $fetch[0] + $punto;
-                $sql = "UPDATE acumulador SET acum = '$suma' WHERE id='$id'"; 
+                $sql = "UPDATE acumulador SET acum = '$suma' WHERE id='$id' and edad=$edad"; 
             }
             mysqli_query($conn, $sql);
             mysqli_close($conn);
