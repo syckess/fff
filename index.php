@@ -34,6 +34,11 @@
                 //$speech = "Podras decir anything cuando la BD este lista";
                 $punto = 20;
             break;
+                
+            case 'C':
+                //$speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
+                $punto = 10;
+            break;
             
             case 'Ver mi resultado':
                 //$speech = "Hi, PORFIN SE CONECTO LA BD";
