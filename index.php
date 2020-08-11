@@ -57,6 +57,16 @@
                 //$speech = "Hi, PORFIN SE CONECTO LA BD";
                 $speech = "Bueno, adios";
             break;
+                
+            case 'Padezco':
+                //$speech = "Hi, PORFIN SE CONECTO LA BD";
+                $punto = 50;
+            break;
+                
+            case 'No padezco':
+                //$speech = "Hi, PORFIN SE CONECTO LA BD";
+                $punto = 0;
+            break;
 
             default:
                 //$speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
