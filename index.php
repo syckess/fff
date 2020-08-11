@@ -9,7 +9,6 @@
         $text = $json->queryResult->parameters->text;
         $id = $json->queryResult->parameters->id;
         $edad = $json->queryResult->parameters->edad;
-        $confirmacion = $json->queryResult->parameters->confirmacion;
         
         
         $servername = "bfpefjoyqfutj3kawr98-mysql.services.clever-cloud.com:3306";
