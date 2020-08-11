@@ -34,24 +34,18 @@
                 //$speech = "Podras decir anything cuando la BD este lista";
                 $punto = 20;
             break;
-
-            default:
-                //$speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
-            break;
-        }
-         switch($confirmacion)
-        {
+            
             case 'Ver mi resultado':
                 //$speech = "Hi, PORFIN SE CONECTO LA BD";
                 $aux = 1;
             break;
             case 'No ver mi resultado':
                 //$speech = "Hi, PORFIN SE CONECTO LA BD";
-                $aux = 1;
+                $speech = "Bueno, adios";
             break;
 
             default:
-                
+                //$speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
             break;
         }
          $sql = "SELECT acum FROM acumulador WHERE id = '$id' and edad = '$edad'";
