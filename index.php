@@ -9,6 +9,7 @@
         $text = $json->queryResult->parameters->text;
         $id = $json->queryResult->parameters->id;
         $edad = $json->queryResult->parameters->edad;
+        $confirmacion = $json->queryResult->parameters->confirmacion;
         
         
         $servername = "bfpefjoyqfutj3kawr98-mysql.services.clever-cloud.com:3306";
@@ -33,17 +34,20 @@
                 //$speech = "Podras decir anything cuando la BD este lista";
                 $punto = 20;
             break;
-                
-            case 'adelante':
-                $aux = 1;
-            break;    
-                
-            case 'Acepto':
-      
-            break;  
 
             default:
                 //$speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
+            break;
+        }
+         switch($confirmacion)
+        {
+            case 'Acepto':
+                //$speech = "Hi, PORFIN SE CONECTO LA BD";
+                $aux = 1;
+            break;
+
+            default:
+                $speech = "Bueno, muchas gracias";
             break;
         }
          $sql = "SELECT acum FROM acumulador WHERE id = '$id' and edad = '$edad'";
