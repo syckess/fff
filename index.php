@@ -41,7 +41,7 @@
         }
          switch($confirmacion)
         {
-            case 'Acepto':
+            case 'Acepto ver mi resultado':
                 //$speech = "Hi, PORFIN SE CONECTO LA BD";
                 $aux = 1;
             break;
