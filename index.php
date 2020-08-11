@@ -37,7 +37,17 @@
                 
             case 'C':
                 //$speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
+                $punto = 20;
+            break;
+                
+            case 'B':
+                //$speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
                 $punto = 10;
+            break;
+                
+            case 'A':
+                //$speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
+                $punto = 5;
             break;
             
             case 'Ver mi resultado':
