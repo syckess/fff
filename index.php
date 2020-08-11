@@ -85,7 +85,7 @@
             else
             {
                 $suma = $fetch[0] + $punto;
-                $sql = "UPDATE acumulador SET acum = '$suma' WHERE id='$id' and edad=$edad"; 
+                $sql = "UPDATE acumulador SET acum = '$suma' WHERE id='$id' and edad='$edad'"; 
             }
             mysqli_query($conn, $sql);
             mysqli_close($conn);
