@@ -67,7 +67,7 @@
          $fetch = mysqli_fetch_array($resultado); 
         if($aux == 1)
         {
-            $speech = $fetch[0];
+            $speech = "Tu puntiacion es: $fetch[0];
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
             $response->displayText = $speech;
