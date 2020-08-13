@@ -70,6 +70,7 @@
 
             default:
                 $speech = "Lo siento, no te entendi, vuelve a ingresar tu respuesta";
+                $punto = 0;
             break;
         }
          $sql = "SELECT acum FROM acumulador WHERE id = '$id' and edad = '$edad'";
