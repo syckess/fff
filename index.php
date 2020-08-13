@@ -69,7 +69,7 @@
             break;
 
             default:
-                //$speech = "Sorry, no te escuche porque estoy buscando resolver lo de la BD";
+                $speech = "Lo siento, no te entendi, vuelve a ingresar tu respuesta";
             break;
         }
          $sql = "SELECT acum FROM acumulador WHERE id = '$id' and edad = '$edad'";
