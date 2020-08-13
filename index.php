@@ -20,51 +20,61 @@
         switch($text)
         {
             case 'No':
-                //$speech = "Hi, PORFIN SE CONECTO LA BD";
-                $punto = 5;
+                if($edad >= 60)
+                {
+                    $punto = 15;
+                }
+                else if($edad < 60 && $edad >= 40)
+                {
+                    $punto = 10;
+                }
+                else if($edad < 40 && $edad >= 1)
+                {
+                    $punto = 5;
+                }
             break;
            
             case 'Poca':
-                //$speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
+                
                 $punto = 10;
             break;
             
             case 'Si':
-                //$speech = "Podras decir anything cuando la BD este lista";
+                
                 $punto = 20;
             break;
                 
             case 'C':
-                //$speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
+                
                 $punto = 20;
             break;
                 
             case 'B':
-                //$speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
+                
                 $punto = 10;
             break;
                 
             case 'A':
-                //$speech = "Bye, trataremos de tener listo lo de la BD la proxima vez que nos veamos";
+                
                 $punto = 5;
             break;
             
             case 'Ver mi resultado':
-                //$speech = "Hi, PORFIN SE CONECTO LA BD";
+                
                 $aux = 1;
             break;
             case 'No ver mi resultado':
-                //$speech = "Hi, PORFIN SE CONECTO LA BD";
+                
                 $speech = "Bueno, adios";
             break;
                 
             case 'Padezco':
-                //$speech = "Hi, PORFIN SE CONECTO LA BD";
+                
                 $punto = 50;
             break;
                 
             case 'No padezco':
-                //$speech = "Hi, PORFIN SE CONECTO LA BD";
+                
                 $punto = 0;
             break;
 
