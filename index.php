@@ -138,7 +138,27 @@
          $fetch = mysqli_fetch_array($resultado); 
         if($aux == 1)
         {
-            $speech = "Tu puntiación es: $fetch[0]";
+            if($fetch[0] >= 35 && $fetch[0] <= 62)
+                {
+                    $speech = "Estimado usuario, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Muy baja";
+                }
+                else if($fetch[0] > 62 && $fetch[0] <= 88)
+                {
+                    $speech = "Estimado usuario, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Baja";
+                }
+                else if($edad > 88 && $edad <= 114)
+                {
+                    $speech = "Estimado usuario, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Media";
+                }
+                else if($fetch[0] > 114 && $fetch[0] <= 127)
+                {
+                    $speech = "Estimado usuario, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Alta";
+                }
+                else if($fetch[0] > 127 && $fetch[0] <= 140)
+                {
+                    $speech = "Estimado usuario, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Muy alta";
+                }
+            //$speech = "Tu puntiación es: $fetch[0]";
             $response = new \stdclass();
             $response->fulfillmentText = $speech;
             $response->displayText = $speech;
