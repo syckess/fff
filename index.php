@@ -35,23 +35,63 @@
             break;
            
             case 'Poca':
-                
-                $punto = 10;
+                if($edad >= 60)
+                {
+                    $punto = 20;
+                }
+                else if($edad < 60 && $edad >= 40)
+                {
+                    $punto = 15;
+                }
+                else if($edad < 40 && $edad >= 1)
+                {
+                    $punto = 10;
+                }
             break;
             
             case 'Si':
-                
-                $punto = 20;
+                if($edad >= 60)
+                {
+                    $punto = 25;
+                }
+                else if($edad < 60 && $edad >= 40)
+                {
+                    $punto = 20;
+                }
+                else if($edad < 40 && $edad >= 1)
+                {
+                    $punto = 15;
+                }
             break;
                 
             case 'C':
-                
-                $punto = 20;
+                if($edad >= 60)
+                {
+                    $punto = 25;
+                }
+                else if($edad < 60 && $edad >= 40)
+                {
+                    $punto = 20;
+                }
+                else if($edad < 40 && $edad >= 1)
+                {
+                    $punto = 15;
+                }
             break;
                 
             case 'B':
-                
-                $punto = 10;
+                if($edad >= 60)
+                {
+                    $punto = 20;
+                }
+                else if($edad < 60 && $edad >= 40)
+                {
+                    $punto = 15;
+                }
+                else if($edad < 40 && $edad >= 1)
+                {
+                    $punto = 10;
+                }
             break;
                 
             case 'A':
