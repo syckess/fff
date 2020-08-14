@@ -89,7 +89,7 @@
             break;
 
             default:
-                $speech = "Lo siento, no te entendi, vuelve a ingresar tu respuesta";
+                $speech = "Disculpa, no te entendi, vuelve a intentarlo porfavor";
                 $punto = 0;
             break;
         }
