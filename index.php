@@ -141,29 +141,54 @@
             if($fetch[0] >= 35 && $fetch[0] <= 62)
                 {
                     $speech = "Estimado usuario, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Muy baja";
+                    $response = new \stdclass();
+                    $response->fulfillmentText = $speech;
+                    $response->displayText = $speech;
+                    $response->source = "webhook";
+                    echo json_encode($response); 
                 }
                 else if($fetch[0] > 62 && $fetch[0] <= 88)
                 {
                     $speech = "Estimado usuario, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Baja";
+                    $response = new \stdclass();
+                    $response->fulfillmentText = $speech;
+                    $response->displayText = $speech;
+                    $response->source = "webhook";
+                    echo json_encode($response);
                 }
                 else if($edad > 88 && $edad <= 114)
                 {
                     $speech = "Estimado usuario, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Media";
+                    $response = new \stdclass();
+                    $response->fulfillmentText = $speech;
+                    $response->displayText = $speech;
+                    $response->source = "webhook";
+                    echo json_encode($response);
                 }
                 else if($fetch[0] > 114 && $fetch[0] <= 127)
                 {
                     $speech = "Estimado usuario, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Alta";
+                    $response = new \stdclass();
+                    $response->fulfillmentText = $speech;
+                    $response->displayText = $speech;
+                    $response->source = "webhook";
+                    echo json_encode($response);
                 }
                 else if($fetch[0] > 127 && $fetch[0] <= 140)
                 {
                     $speech = "Estimado usuario, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Muy alta";
+                    $response = new \stdclass();
+                    $response->fulfillmentText = $speech;
+                    $response->displayText = $speech;
+                    $response->source = "webhook";
+                    echo json_encode($response);
                 }
             //$speech = "Tu puntiación es: $fetch[0]";
-            $response = new \stdclass();
-            $response->fulfillmentText = $speech;
-            $response->displayText = $speech;
-            $response->source = "webhook";
-            echo json_encode($response);    
+            //$response = new \stdclass();
+            //$response->fulfillmentText = $speech;
+            //$response->displayText = $speech;
+            //$response->source = "webhook";
+            //echo json_encode($response);    
             mysqli_close($conn);
         }
         else
