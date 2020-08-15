@@ -174,7 +174,7 @@
                     $response->source = "webhook";
                     echo json_encode($response);
                 }
-                else if($fetch[0] > 127 && $fetch[0] <= 140)
+                else if($fetch[0] > 127)
                 {
                     $speech = "Estimado $id, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Muy alta";
                     $response = new \stdclass();
