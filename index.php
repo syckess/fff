@@ -129,7 +129,7 @@
             break;
 
             default:
-                $speech = "Disculpa $id, no te entendi, vuelve a intentarlo porfavor";
+                $speech = "Disculpa, no te entendi, vuelve a intentarlo porfavor";
                 $punto = 0;
             break;
         }
