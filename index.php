@@ -62,11 +62,11 @@
                 }
             break;
             
-            case 'Ver mi resultado':
+            case '4':
                 
                 $aux = 1;
             break;
-            case 'No ver mi resultado':
+            case '5':
                 
                 $speech = "Bueno, adios";
             break;
