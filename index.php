@@ -133,10 +133,6 @@
                 $punto = 0;
             break;
         }
-        if($despedida!=NULL)
-        {
-            $speech = "CHAO CTM";
-        }
          $sql = "SELECT acum FROM acumulador WHERE id = '$id' and edad = '$edad'";
          $resultado = mysqli_query($conn, $sql);
          $fetch = mysqli_fetch_array($resultado); 
