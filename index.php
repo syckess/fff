@@ -70,6 +70,10 @@
                 
                 $speech = "Bueno, adios";
             break;
+            case '6':
+                
+                $speech = "Bueno, adios";
+            break;
                 
             case 'Padezco':
                 
