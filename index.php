@@ -18,98 +18,36 @@
         $conn = mysqli_connect($servername, $username, $password, $database);
 
         switch($text)
-        {
-            case 'No':
-                if($edad >= 60)
-                {
-                    $punto = 15;
-                }
-                else if($edad < 60 && $edad >= 40)
-                {
-                    $punto = 10;
-                }
-                else if($edad < 40 && $edad >= 1)
-                {
-                    $punto = 5;
-                }
-            break;
-           
-            case 'Poca':
-                if($edad >= 60)
-                {
-                    $punto = 20;
-                }
-                else if($edad < 60 && $edad >= 40)
-                {
-                    $punto = 15;
-                }
-                else if($edad < 40 && $edad >= 1)
-                {
-                    $punto = 10;
-                }
-            break;
-            
-            case 'Si':
-                if($edad >= 60)
-                {
-                    $punto = 25;
-                }
-                else if($edad < 60 && $edad >= 40)
-                {
-                    $punto = 20;
-                }
-                else if($edad < 40 && $edad >= 1)
-                {
-                    $punto = 15;
-                }
-            break;
-                
-            case 'C':
-                if($edad >= 60)
-                {
-                    $punto = 25;
-                }
-                else if($edad < 60 && $edad >= 40)
-                {
-                    $punto = 20;
-                }
-                else if($edad < 40 && $edad >= 1)
-                {
-                    $punto = 15;
-                }
-            break;
-                
-            case 'B':
-                if($edad >= 60)
-                {
-                    $punto = 20;
-                }
-                else if($edad < 60 && $edad >= 40)
-                {
-                    $punto = 15;
-                }
-                else if($edad < 40 && $edad >= 1)
-                {
-                    $punto = 10;
-                }
-            break;
-                
-            case 'A':
-                if($edad >= 60)
-                {
-                    $punto = 15;
-                }
-                else if($edad < 60 && $edad >= 40)
-                {
-                    $punto = 10;
-                }
-                else if($edad < 40 && $edad >= 1)
-                {
-                    $punto = 5;
-                }
-            break;
-                
+        {    
             case '1':
+                if($edad >= 60)
+                {
+                    $punto = 15;
+                }
+                else if($edad < 60 && $edad >= 40)
+                {
+                    $punto = 10;
+                }
+                else if($edad < 40 && $edad >= 1)
+                {
+                    $punto = 5;
+                }
+            break;
+            case '2':
+                if($edad >= 60)
+                {
+                    $punto = 15;
+                }
+                else if($edad < 60 && $edad >= 40)
+                {
+                    $punto = 10;
+                }
+                else if($edad < 40 && $edad >= 1)
+                {
+                    $punto = 5;
+                }
+            break;
+            case '3':
                 if($edad >= 60)
                 {
                     $punto = 15;
