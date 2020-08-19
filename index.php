@@ -108,6 +108,21 @@
                     $punto = 5;
                 }
             break;
+                
+            case '1':
+                if($edad >= 60)
+                {
+                    $punto = 15;
+                }
+                else if($edad < 60 && $edad >= 40)
+                {
+                    $punto = 10;
+                }
+                else if($edad < 40 && $edad >= 1)
+                {
+                    $punto = 5;
+                }
+            break;
             
             case 'Ver mi resultado':
                 
