@@ -22,29 +22,29 @@
             case '1':
                 if($edad >= 60)
                 {
-                    $punto = 15;
+                    $punto = 25;
                 }
                 else if($edad < 60 && $edad >= 40)
                 {
-                    $punto = 10;
+                    $punto = 20;
                 }
                 else if($edad < 40 && $edad >= 1)
                 {
-                    $punto = 5;
+                    $punto = 15;
                 }
             break;
             case '2':
                 if($edad >= 60)
                 {
-                    $punto = 15;
+                    $punto = 20;
                 }
                 else if($edad < 60 && $edad >= 40)
                 {
-                    $punto = 10;
+                    $punto = 15;
                 }
                 else if($edad < 40 && $edad >= 1)
                 {
-                    $punto = 5;
+                    $punto = 10;
                 }
             break;
             case '3':
