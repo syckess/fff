@@ -103,6 +103,8 @@
                     $response->displayText = $speech;
                     $response->source = "webhook";
                     echo json_encode($response); 
+                    $sql2 = "DELETE FROM acumulador WHERE id = '$id' AND edad = '$edad'";
+                
                 }
                 else if($fetch[0] > 62 && $fetch[0] <= 88)
                 {
@@ -112,6 +114,7 @@
                     $response->displayText = $speech;
                     $response->source = "webhook";
                     echo json_encode($response);
+                    $sql2 = "DELETE FROM acumulador WHERE id = '$id' AND edad = '$edad'";
                 }
                 else if($fetch[0] > 88 && $fetch[0] <= 114)
                 {
@@ -121,6 +124,7 @@
                     $response->displayText = $speech;
                     $response->source = "webhook";
                     echo json_encode($response);
+                    $sql2 = "DELETE FROM acumulador WHERE id = '$id' AND edad = '$edad'";
                 }
                 else if($fetch[0] > 114 && $fetch[0] <= 127)
                 {
@@ -130,6 +134,7 @@
                     $response->displayText = $speech;
                     $response->source = "webhook";
                     echo json_encode($response);
+                    $sql2 = "DELETE FROM acumulador WHERE id = '$id' AND edad = '$edad'";
                 }
                 else if($fetch[0] > 127)
                 {
@@ -139,6 +144,7 @@
                     $response->displayText = $speech;
                     $response->source = "webhook";
                     echo json_encode($response);
+                    $sql2 = "DELETE FROM acumulador WHERE id = '$id' AND edad = '$edad'";
                 }
             //$speech = "Tu puntiación es: $fetch[0]";
             //$response = new \stdclass();
@@ -146,7 +152,7 @@
             //$response->displayText = $speech;
             //$response->source = "webhook";
             //echo json_encode($response);    
-            mysqli_close($conn);
+            mysqli_close($conn,$sql2);
         }
         else
         {
