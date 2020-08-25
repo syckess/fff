@@ -153,6 +153,8 @@
             //$response->source = "webhook";
             //echo json_encode($response);
             $sql = "DELETE FROM acumulador WHERE id = '$id' AND edad = '$edad'";
+            mysqli_query($conn, $sql);
+            mysqli_close($conn);
         }
         else
         {
