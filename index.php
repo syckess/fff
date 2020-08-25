@@ -104,6 +104,7 @@
                     $response->source = "webhook";
                     echo json_encode($response); 
                     $sql2 = "DELETE FROM acumulador WHERE id = '$id' AND edad = '$edad'";
+                    mysqli_close($sql2);
                 
                 }
                 else if($fetch[0] > 62 && $fetch[0] <= 88)
@@ -115,6 +116,7 @@
                     $response->source = "webhook";
                     echo json_encode($response);
                     $sql2 = "DELETE FROM acumulador WHERE id = '$id' AND edad = '$edad'";
+                    mysqli_close($sql2);
                 }
                 else if($fetch[0] > 88 && $fetch[0] <= 114)
                 {
@@ -125,6 +127,7 @@
                     $response->source = "webhook";
                     echo json_encode($response);
                     $sql2 = "DELETE FROM acumulador WHERE id = '$id' AND edad = '$edad'";
+                    mysqli_close($sql2);
                 }
                 else if($fetch[0] > 114 && $fetch[0] <= 127)
                 {
@@ -135,6 +138,7 @@
                     $response->source = "webhook";
                     echo json_encode($response);
                     $sql2 = "DELETE FROM acumulador WHERE id = '$id' AND edad = '$edad'";
+                    mysqli_close($sql2);
                 }
                 else if($fetch[0] > 127)
                 {
@@ -145,6 +149,7 @@
                     $response->source = "webhook";
                     echo json_encode($response);
                     $sql2 = "DELETE FROM acumulador WHERE id = '$id' AND edad = '$edad'";
+                    mysqli_close($sql2);
                 }
             //$speech = "Tu puntiación es: $fetch[0]";
             //$response = new \stdclass();
@@ -152,7 +157,7 @@
             //$response->displayText = $speech;
             //$response->source = "webhook";
             //echo json_encode($response);    
-            mysqli_close($conn,$sql2);
+            mysqli_close($conn);
         }
         else
         {
