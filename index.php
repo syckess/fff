@@ -97,7 +97,7 @@
         {
             if($fetch[0] >= 35 && $fetch[0] <= 62)
                 {
-                    $speech = "Estimado $id, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Muy baja";
+                    $speech = "Estimado $id, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Muy baja.";
                     $response = new \stdclass();
                     $response->fulfillmentText = $speech;
                     $response->displayText = $speech;
@@ -108,7 +108,7 @@
                 }
                 else if($fetch[0] > 62 && $fetch[0] <= 88)
                 {
-                    $speech = "Estimado $id, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Baja";
+                    $speech = "Estimado $id, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Baja.";
                     $response = new \stdclass();
                     $response->fulfillmentText = $speech;
                     $response->displayText = $speech;
@@ -118,7 +118,7 @@
                 }
                 else if($fetch[0] > 88 && $fetch[0] <= 114)
                 {
-                    $speech = "Estimado $id, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Media";
+                    $speech = "Estimado $id, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Media.";
                     $response = new \stdclass();
                     $response->fulfillmentText = $speech;
                     $response->displayText = $speech;
@@ -128,7 +128,7 @@
                 }
                 else if($fetch[0] > 114 && $fetch[0] <= 127)
                 {
-                    $speech = "Estimado $id, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Alta";
+                    $speech = "Estimado $id, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Alta.";
                     $response = new \stdclass();
                     $response->fulfillmentText = $speech;
                     $response->displayText = $speech;
@@ -138,7 +138,7 @@
                 }
                 else if($fetch[0] > 127)
                 {
-                    $speech = "Estimado $id, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Muy alta";
+                    $speech = "Estimado $id, según las respuestas que usted ha dado, le informamos que la probabilidad de que usted tenga coronavirus es: Muy alta.";
                     $response = new \stdclass();
                     $response->fulfillmentText = $speech;
                     $response->displayText = $speech;
